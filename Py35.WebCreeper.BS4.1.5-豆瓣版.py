@@ -12,7 +12,7 @@ images = bsObj.findAll("img", {"src": re.compile("view")})
 
 for image in images:
     print(image["src"].replace("m", "large").replace("ilargeg3.doubanio.colarge", "img3.doubanio.com").replace(
-        "ilargeg1.doubanio.colarge", "img1.doubanio.com"))
+        "ilargeg1.doubanio.colarge", "img1.doubanio.com"))  # 豆瓣图片URL
     n += 1
     imagefilename = "D:\Scrap Photo\\" + str(n) + ".jpg"
     url = image["src"].replace("m", "large").replace("ilargeg3.doubanio.colarge", "img3.doubanio.com").replace(
