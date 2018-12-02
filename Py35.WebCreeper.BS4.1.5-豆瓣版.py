@@ -4,7 +4,9 @@ import urllib.request
 import re
 import time
 
-n = int(input("Enter the number of photo: "))
+file1 = open('image/number', 'r')
+n = int(file1.read())
+file1.close()
 html = urlopen(input("Enter the URL: "))
 
 bsObj = BeautifulSoup(html.read(), "html.parser")
@@ -21,6 +23,9 @@ for image in images:
     time.sleep(3)
 
 print("Ha!Ha! The Pictures Downloaded!")
+file2 = open('image/number', 'w+')
+file2.write(str(n))
+file2.close()
 time.sleep(5)
 print("The number of pictures: ", n)
 print("Bye-Bye")
